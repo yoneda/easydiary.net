@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Easy Diary</title>
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<div id="container">
+			<main class="main"><h2>Easy Diary</h2><p>シンプルな日記アプリ</p><button class="fab-extended" onclick="test()">ダウンロード</button></main>
+			<footer class="footer"><p>ソースコード | 利用規約 | プライバシーポリシー</p></footer>
+		</div>
+	</body>
+</html>
+
+<style>
+	body {
+		font-family: "Roboto", sans-serif;
+		margin: 0px;
+		box-sizing: border-box;
+	}
+
+	#container{
+		height: 100vh;
+		font-size: 16px;
+		box-sizing: border-box;
+
+		display: grid;
+		grid-template-columns: 1fr 500px 1fr;
+		grid-template-rows: 1fr 100px;
+	}
+
+	.footer{
+		grid-column: 1/4;
+		grid-row: 2/3;
+
+		display: flex;
+		justify-content: center;
+		background-color: rgba(0,0,0,0.05);
+	}
+
+	.fab-extended {
+		height: 48px;
+		padding: 0 16px;
+		border-radius: 24px;
+		box-shadow: 0px 3px 5px -1px rgb(0 0 0 / 20%),
+			0px 6px 10px 0px rgb(0 0 0 / 14%), 0px 1px 18px 0px rgb(0 0 0 / 12%);
+		outline: none;
+		border: none;
+
+		display: flex;
+		align-items: center;
+		font-size: 18px;
+		background-color: white;
+		cursor: pointer;
+	}
+
+	.main{
+		grid-column: 2/3;
+		grid-row: 1/2;
+
+		display: flex;
+		flex-flow: column nowrap;
+		align-items: center;
+		justify-content: center;
+	}
+</style>
+<script>
+	const container = document.getElementById("container");
+	function test(){
+		console.log("aa");
+	}
+</script>
